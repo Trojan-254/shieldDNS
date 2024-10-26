@@ -6,10 +6,10 @@ use std::sync::Arc;
 
 use getopts::Options;
 
-use hermes::dns::context::{ResolveStrategy, ServerContext};
-use hermes::dns::protocol::{DnsRecord, TransientTtl};
-use hermes::dns::server::{DnsServer, DnsTcpServer, DnsUdpServer};
-use hermes::web::server::WebServer;
+use shieldnet_dns::dns::context::{ResolveStrategy, ServerContext};
+use shieldnet_dns::dns::protocol::{DnsRecord, TransientTtl};
+use shieldnet_dns::dns::server::{DnsServer, DnsTcpServer, DnsUdpServer};
+use shieldnet_dns::web::server::WebServer;
 
 fn print_usage(program: &str, opts: Options) {
     let brief = format!("Usage: {} [options]", program);
@@ -37,7 +37,7 @@ fn main() {
 
     let opt_matches = match opts.parse(&args[1..]) {
         Ok(m) => m,
-        Err(f) => panic!(f.to_string()),
+        Err(f) => panic!("{:?}", f.to_string()),
     };
 
     if opt_matches.opt_present("h") {
