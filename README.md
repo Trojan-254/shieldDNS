@@ -1,9 +1,9 @@
-Hermes DNS server
-=================
+# SHIELDNET DNS SERVER
+
 
 ![Rust](https://github.com/EmilHernvall/hermes/workflows/Rust/badge.svg)
 
-Hermes is a compact DNS server in safe rust. It provides:
+Shieldnet is a compact DNS server in safe rust. It provides:
 
  * Quick and easy configuration through a few select command line parameters.
  * The ability to recursively resolve directly using the Internet root servers
@@ -55,4 +55,4 @@ Contact
 
 Comments and pull requests are welcome and encouraged.
 
-Author: Emil Hernvall <emil@c0la.se>
+Author: Samwuel Simiyu <simiyu.tech>
